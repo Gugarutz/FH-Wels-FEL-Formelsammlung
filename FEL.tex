@@ -1,0 +1,97 @@
+% !TeX spellcheck = de_DE
+% Bitte benutze TexLive und TexStudio
+% github:
+
+\documentclass[	a4paper
+				,11pt
+				,oneside
+				,egregdoesnotlikesansseriftitles	% disable all sans serif
+				,fleqn
+				]{scrartcl}
+	\RedeclareSectionCommand[beforeskip=1em]{subsection}
+	\RedeclareSectionCommand[afterskip=0.5em]{subsection}
+	\RedeclareSectionCommand[afterskip=0.5em]{section}
+
+\usepackage[automark]{scrlayer-scrpage} % best package for head and foot control
+	\clearpairofpagestyles		% clears existing pagestyle % \clearscrheadfoot deprecated
+	%\automark[section]{section} 	% [right] and {left} markings respectively
+	%\ihead[]{\headmark}			% auto assign even and odd to left and right resp
+	\ofoot[]{\underline{\pagemark}}			% pagenumber
+
+\usepackage[ngerman]{babel}   	% Deutsche Einstellungen
+\usepackage[utf8]{inputenc}  	% utf-8 Eingabe
+\usepackage[T1]{fontenc}      	% Korrekte Behandlung von Sonderzeichen in der Ergebnis PDF-Datei.
+\usepackage{csquotes}         	% Für Anführungsstriche
+\usepackage{lmodern} 			% schriftart
+
+% Mathe
+\usepackage{chemformula}
+\usepackage{mathtools}			% loads amsmath
+\usepackage{relsize,exscale}	% sizing
+\usepackage{array}				% Mathematische Tabellen
+\usepackage{xfrac,nicefrac}
+
+
+% formatierung und spacing
+\usepackage{multirow} 			% Zellenübergreifende reihen und Spalten
+\usepackage[nodisplayskipstretch]{setspace}
+	\onehalfspacing
+	\renewcommand{\arraystretch}{1.2} % Reihen seperation global
+\usepackage{indentfirst} 		% indents first paragraph
+\setlength{\parindent}{27.3pt}
+
+\usepackage{geometry}
+	\geometry{	a4paper,
+				top=2cm,
+				bottom=2cm,
+				left=2cm,
+				right=1cm,
+				footskip=0.5cm,
+				headsep=0pt,
+				includeheadfoot,
+			}
+			
+
+\usepackage{graphicx}
+	\graphicspath{{graphics/}}
+	\usepackage{subcaption}
+
+\usepackage{siunitx}			% einheiten
+	\sisetup{	locale = DE, 			% localisation
+				per-mode=fraction,	    % display as fractions
+				fraction-function=\dfrac,
+				separate-uncertainty}	% uncertainty as plus minus not a bracket
+
+
+% Math
+	\newcommand{\dd}{{\operatorname{d\!l}}}
+	\newcommand{\imag}{\mathrm{i}}
+	\newcommand{\eul}{\mathrm{\textbf{e}}}
+	\newcommand{\abs}[1]{\left|#1\right|}
+	\newcommand{\absvec}[1]{\left|\left|#1\right|\right|}
+	\newcommand{\deriv}[2]{\frac{\dd #1}{\dd #2}}
+	\newcommand{\spur}{\mathrm{spur}}
+	
+	\newenvironment{detmatrix}{\det \left| \begin{matrix}}{\end{matrix}\right|}
+
+% Kontrolle des skips über displaymath
+	\newcommand*{\skipabove}[1]{\setlength{\abovedisplayskip}{#1} \setlength{\abovedisplayshortskip}{#1}}
+
+% Textersetzung
+	\newcommand{\ue}{\ddot{u}} % einfaches ü nicht verwenden, da nicht kursiv
+	\newcommand{\oum}{\ddot{o}}
+	\newcommand{\aum}{\ddot{a}}
+	\newcommand{\tb}{\textbackslash}
+	\newcommand{\eff}{e\!f\!f}
+
+
+ \usepackage{showframe}		% auskommentieren vor finalem build % shows frames around margin, head, foot, etc;
+
+	\title{Formelsammlung FEL-3}
+	\author{basierend auf dem Skript von Prof. Reiter}
+	\date{\today}
+
+\begin{document}
+	\maketitle
+	\input{section/FEL1}
+\end{document}

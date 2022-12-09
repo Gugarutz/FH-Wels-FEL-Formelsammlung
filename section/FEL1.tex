@@ -1,0 +1,174 @@
+
+\section{Spannungstensor}
+
+\paragraph{Tensor:} 
+	$ \left[\sigma_{ij}\right]
+		=\left[\begin{matrix}
+			\sigma_{xx} & \sigma_{yx} & \sigma_{zx} \\
+			\sigma_{xy} & \sigma_{yy} & \sigma_{zy} \\
+			\sigma_{xz} & \sigma_{yz} & \sigma_{zz}
+		\end{matrix}\right]
+	$
+
+\paragraph{Spannungsvektor:}
+	$ \vec{\sigma}_n = \left[\sigma_{ij}\right]\cdot\vec{n} $ 
+		\quad $ \vec{n} $ \dots muss Einheitsvektor sein
+		
+\paragraph{Normalspannung:}
+	$ \sigma_{nn} = \vec{\sigma}_n\cdot\vec{n} $
+
+\paragraph{Schubspannung:}
+	$ \tau = \sqrt{\sigma^2 - \sigma_n^2} 
+		\quad \text{mit } \sigma = \absvec{\vec{\sigma}_{nn}}
+		\qquad \vec{\tau} = \sigma_n - \sigma_{nn} \cdot \vec{n} 
+		\quad  \rightarrow
+		\quad \tau = \absvec{\vec{\tau}}
+	$
+	
+\paragraph{Hauptnormalspannungen:}
+	$ 	- \sigma^3 + I_1 \cdot \sigma^2 - I_2 \cdot \sigma + I_3 = 0 $ \quad (Eigenwertproblem, lösen mit Rechenknecht)
+	
+\paragraph{Koeffizienten (Invarianten) des Spannungstensors:}
+	\[ 	I_1=\sigma_{xx}+\sigma_{yy}+\sigma_{zz}=Spur\left[\sigma_{ij}\right] \]
+	\[ 	I_3=\det{\left[\sigma_{ij}\right]}=\sigma_1\cdot\sigma_2\cdot\sigma_3  \]
+	\[ 	I_2 = 
+		\begin{detmatrix}
+			\sigma_{xx} & \sigma_{yx} \\
+			\sigma_{xy} & \sigma_{yy}
+		\end{detmatrix}
+		+
+		\begin{detmatrix}
+			\sigma_{yy} & \sigma_{yz} \\
+			\sigma_{yz} & \sigma_{zz}
+		\end{detmatrix}
+		+
+		\begin{detmatrix}
+			\sigma_{xx} & \sigma_{zx} \\
+			\sigma_{xz} & \sigma_{zz}
+		\end{detmatrix}
+		=
+		\sigma_1\cdot\sigma_2 + \sigma_2\cdot\sigma_3 + \sigma_3\cdot\sigma_1  
+	\] 
+
+\paragraph{Normalrichtungen zu den Hauptnormalspannungen:}
+
+	\[ 
+	\left\{ \left[ \sigma_{ij} \right] - \sigma_i \cdot [I] \right\} \cdot \vec{n}_i = \vec{0}
+	\quad [I] \dots 	\text{Einheitsmatrix }
+	\quad \sigma_i\dots \text{Einsetzten von } \sigma_1, \sigma_2 \text{ und } \sigma_3
+	\rightarrow	\vec{n}_1,\ \vec{n}_2 \text{ und } {\vec{n}}_3 
+	\]
+	
+\paragraph{Kesselformeln:}
+	$ \sigma_{xx} = \dfrac{p_{\ue}}{2\ t} R \qquad \sigma_{yy} = \sigma_{\varphi\varphi} = 2\ \sigma_{xx} $ \qquad (ESZ) \qquad $ t \dots $ Wandstärke 
+	
+	
+	
+	
+\clearpage
+\section{Verzerrungstensor}
+
+\paragraph{Tensor:}
+	$ 
+	\left[\varepsilon_{ij}\right]
+	=
+	\left[\begin{matrix}
+		\varepsilon_{xx} & \varepsilon_{xy} & \varepsilon_{zx} \\
+		\varepsilon_{xy} & \varepsilon_{yy} & \varepsilon_{yz} \\
+		\varepsilon_{zx} & \varepsilon_{yz} & \varepsilon_{zz}
+	\end{matrix}\right]
+	=
+	\left[\begin{matrix}
+		\varepsilon_{xx}      & \frac{\gamma_{xy}}{2} & \frac{\gamma_{zx}}{2} \\
+		\frac{\gamma_{xy}}{2} & \varepsilon_{yy}      & \frac{\gamma_{yz}}{2} \\
+		\frac{\gamma_{zx}}{2} & \frac{\gamma_{yz}}{2} & \varepsilon_{zz}
+	\end{matrix}\right]
+	$
+	\hfil
+	$ \varepsilon_i = \vec{n}_i^\top \cdot [\varepsilon_{ij}] \cdot \vec{n}_i $
+	\hfil
+	
+\paragraph{Materialgesetz: (isentrope Materiale)}
+	\[ 
+		\varepsilon_{xx} = \dfrac{\sigma_1}{E} - \nu \cdot \dfrac {\sigma_2}{E} - \nu \cdot \dfrac{\sigma_3}{E} + \alpha_T \cdot \Delta T
+		\qquad\qquad
+		\varepsilon_{yy} = \dfrac{\sigma_2}{E} - \nu \cdot \dfrac {\sigma_3}{E} - \nu \cdot \dfrac{\sigma_1}{E} + \alpha_T \cdot \Delta T 
+	\]
+	\[
+		\varepsilon_{zz} = \dfrac{\sigma_3}{E} - \nu \cdot \dfrac {\sigma_1}{E} - \nu \cdot \dfrac{\sigma_2}{E} + \alpha_T \cdot \Delta T
+		\qquad\qquad
+		\gamma_{xy} = \dfrac{1}{G} \cdot \sigma_{xy} = \dfrac{2 \cdot (1 + \nu)}{E} \cdot \sigma_{xy}
+	\]
+	
+\paragraph{Vergleichsspannungen}
+	\[ 
+		\text{Mises: } \quad 
+		\sigma_{v,M} = \sqrt{\dfrac{1}{2} \cdot \left[\left(\sigma_x-\sigma_y\right)^2+\left(\sigma_y-\sigma_z\right)^2+\left(\sigma_z-\sigma_x\right)^2+6\cdot\left({\tau_{xy}}^2+{\tau_{xz}}^2+{\tau_{yz}}^2\right)\right]}
+	\]
+	\[ 
+	\text{Mises einfach: } \quad \sigma_v = \sqrt{\sigma^2 + \zeta\ \tau^2} \quad \zeta = \left(\dfrac{\sigma_D}{\tau_D}\right)^2 \text{ oder } = 3
+	\qquad
+	\text{Schweißnaht: }\quad \sigma_{vs} = \sqrt{\sigma_\perp^2 + \tau_\parallel^2 + \tau_\perp^2}
+	\]
+
+\section{Biegungen, Verzerrungen und Energien (?)}
+
+\paragraph{Verzerrung eines Balkens}
+	$ U = \displaystyle\int_{x_1}^{x_2} \dfrac{N^2}  {2\ E\ A}   \dd x
+	    + \displaystyle\int_{x_1}^{x_2} \dfrac{M_b^2}{2\ E\ J_b} \dd x 
+	    + \displaystyle\int_{x_1}^{x_2} \dfrac{M_T^2}{2\ G\ J_T} \dd x 
+	    + \displaystyle\int_{x_1}^{x_2} \dfrac{Q^2}  {2\ G\ A_s} \dd x $
+
+\paragraph{Arbeitssatz}
+	$ W = U \qquad 
+		W = \dfrac{1}{2}\ F\ w_F$
+
+\paragraph{Castigliano:}
+	$ w_f  = \dfrac{\partial U}{\partial F_i} \qquad w_H = \dfrac{\partial U}{\partial H} $
+	
+\paragraph{Menabrea:}
+	$ \dfrac{\partial U}{\partial X_i} = 0 $
+		
+		\vskip 3pt
+	$ X_i $\dots Auflagekraft; statisch unbestimmte, innere Kraft
+	
+	\textbf{Äußere/Innerlich statische Bestimmtheit:}
+	
+	2-dimensional:\quad $ N = Z + R - 3\ K $
+		\hfil 3-dimensional:\quad $ N = Z + R - 6\ K $ \hfil
+	
+	$ Z $\dots Zwangskräfte
+		\qquad $ R $\dots Reaktionskräfte (Lagerkräfte)
+		\qquad $ K $\dots Körper
+	
+\paragraph{Ritz:} \quad siehe S.176 im Skript
+	
+	$ \vec{u} \approx \tilde{u}_{(x,y,z)} = \displaystyle\sum_k a_k\ \vec{\varphi}_{k(x,y,z)} $
+		\qquad $ \vec{\varphi}_{k(x,y,z)} $\dots Ritz'sche Ansatzfunktion
+		\qquad $ a_k $\dots Koeffizienten
+	
+	$ V \approx \tilde{V}_{(\tilde{u})} = \tilde{V}_{(a_k)} $
+		\qquad $ \dfrac{\partial \tilde{V}_{(a_k)}}{\partial a_k} = 0 \rightarrow a_k $
+		
+\clearpage
+\section{Gesamtpotentiale}
+\subsection{Beispiel 1}
+	$ V = \pi^{(i)} + \pi^{(a)} $
+	
+	\includegraphics[width=5cm]{potential1}
+	
+	
+\paragraph{Inneres Potential $ \pi^{(i)} $:}
+	\qquad $ V_{Biegung} = \displaystyle\int_{0}^{l} E\ J\ w''\,^2 \ \dd x $  (Tilde? Dach?)
+	
+\paragraph{Äußeres Potential $ \pi^{(a)} $:}
+	$ V_{Kraft} = \pm \dfrac{1}{2}\ F\ w_{(f)} $
+	
+	Kraft und Verschiebung in verschiedene ($ + $) und gleiche ($ - $) Richtung
+	
+	$ V_{Streckenlast} = -\displaystyle\int_{0}^{l} \tilde{w}_{(x)}\ q\ \dd x $
+	
+\subsection{Beispiel 2}
+	$ V = \pi^{(i)} + \pi^{(a)} $
+	
+	\includegraphics[width=5cm]{potential2}
