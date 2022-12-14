@@ -55,6 +55,7 @@
 \usepackage{graphicx}
 	\graphicspath{{graphics/}}
 	\usepackage{subcaption}
+\usepackage{pdfpages}
 
 \usepackage{siunitx}			% einheiten
 	\sisetup{	locale = DE, 			% localisation
@@ -71,6 +72,7 @@
 	\newcommand{\absvec}[1]{\left|\left|#1\right|\right|}
 	\newcommand{\deriv}[2]{\frac{\dd #1}{\dd #2}}
 	\newcommand{\spur}{\mathrm{spur}}
+	\def\mat#1{\underline{\underline{#1}}}
 	
 	\newenvironment{detmatrix}{\det \left| \begin{matrix}}{\end{matrix}\right|}
 
