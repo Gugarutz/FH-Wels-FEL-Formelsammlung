@@ -31,7 +31,7 @@
 	$ 	- \sigma^3 + I_1 \cdot \sigma^2 - I_2 \cdot \sigma + I_3 = 0 $ \quad (Eigenwertproblem, lösen mit Rechenknecht)
 	
 \paragraph{ Koeffizienten (Invarianten) des Spannungstensors:}
-	\[ 	I_1=\sigma_{xx}+\sigma_{yy}+\sigma_{zz}=Spur\left[\sigma_{ij}\right] \]
+	\[ 	I_1=\sigma_{xx}+\sigma_{yy}+\sigma_{zz}=\spur [\sigma_{ij}] \]
 	\[ 	I_3=\det{\left[\sigma_{ij}\right]}=\sigma_1\cdot\sigma_2\cdot\sigma_3  \]
 	\[ 	I_2 = 
 		\begin{detmatrix}
@@ -64,7 +64,8 @@
 \paragraph{ Kesselformeln:}
 	$ \sigma_{xx} = \dfrac{p_{\ue}}{2\ t} R \qquad \sigma_{yy} = \sigma_{\varphi\varphi} = 2\ \sigma_{xx} $ \qquad (ESZ) \qquad $ t \dots $ Wandstärke 
 	
-	
+\paragraph{ Krümmungsradius: (hier?)}
+	$ R = \dfrac{E}{\sigma_F} \ds \sqrt{ \dfrac{1}{4} \left[ 3h^2 - M^{EP} \dfrac{12}{b\sigma_F} \right] } $ 
 	
 	
 \clearpage
@@ -107,6 +108,12 @@
 	\quad   K = \dfrac{E}{3(1-2\nu)} 
 	\quad \mu = \dfrac{E}{2(1+ \nu)}   $ kann nicht stimmen
 	
+	$
+		\lambda = \dfrac{E\nu}{ (1+\nu) (1-2\nu) } 
+		\quad \rightarrow \quad
+		\sigma_{ij} = \lambda\varepsilon_{kk} \delta_{ij} + 2\mu \varepsilon_{ij}
+	$
+	
 	
 \paragraph{ Vergleichsspannungen}
 	\[ 
@@ -122,10 +129,11 @@
 \section{Biegungen, Verzerrungen und Energien (?)}
 
 \paragraph{ Verzerrung eines Balkens}
-	$ U = \displaystyle\int_{x_1}^{x_2} \dfrac{N^2}  {2\ E A}   \dd x
-	    + \displaystyle\int_{x_1}^{x_2} \dfrac{M_b^2}{2\ E J_b} \dd x 
-	    + \displaystyle\int_{x_1}^{x_2} \dfrac{M_T^2}{2\ G J_T} \dd x 
-	    + \displaystyle\int_{x_1}^{x_2} \dfrac{Q^2}  {2\ G A_s} \dd x $
+	$ U = \ds
+	      \int_{x_1}^{x_2} \dfrac{N^2}  {2\ E A}   \dd x
+	    + \int_{x_1}^{x_2} \dfrac{M_b^2}{2\ E J_b} \dd x 
+	    + \int_{x_1}^{x_2} \dfrac{M_T^2}{2\ G J_T} \dd x 
+	    + \int_{x_1}^{x_2} \dfrac{Q^2}  {2\ G A_s} \dd x $
 
 \paragraph{ Arbeitssatz}
 	$ W = U \qquad 
@@ -151,7 +159,7 @@
 	
 \paragraph{ Ritz:} \quad siehe S.176 im Skript
 	
-	$ \vec{u} \approx \tilde{u}_{(x,y,z)} = \displaystyle\sum_k a_k\ \vec{\varphi}_{k(x,y,z)} $
+	$ \vec{u} \approx \tilde{u}_{(x,y,z)} = \ds\sum_k a_k\ \vec{\varphi}_{k(x,y,z)} $
 		\qquad $ \vec{\varphi}_{k(x,y,z)} $\dots Ritz'sche Ansatzfunktion
 		\qquad $ a_k $\dots Koeffizienten
 	
@@ -168,14 +176,14 @@
 	
 	
 \paragraph{ Inneres Potential $ \pi^{(i)} $:}
-	\qquad $ V_{Biegung} = \displaystyle\int_{0}^{l} E\ J\ w''\,^2 \ \dd x $  (Tilde? Dach?)
+	\qquad $ V_{Biegung} = \ds\int_{0}^{l} E J\ w''\,^2 \ \dd x $  (Tilde? Dach?)
 	
 \paragraph{ Äußeres Potential $ \pi^{(a)} $:}
 	\qquad $ V_{Kraft} = \pm \dfrac{1}{2}\ F\ w_{(f)} $
 	
 	Kraft und Verschiebung in verschiedene ($ + $) und gleiche ($ - $) Richtung
 	
-	$ V_{Streckenlast} = -\displaystyle\int_{0}^{l} \tilde{w}_{(x)}\ q\ \dd x $
+	$ V_{Streckenlast} = -\ds\int_{0}^{l} \tilde{w}_{(x)}\ q\ \dd x $
 	
 \subsection{Beispiel 2}
 
@@ -184,10 +192,10 @@
 	\includegraphics[width=5cm]{potential2}
 	
 \paragraph{ Inneres Potential $ \pi^{(i)} $}
-	\qquad $ V_{Biegung}= \dfrac{1}{2} \displaystyle \int_{0}^{l} E J\ w''\, ^2 \ \dd x $
+	\qquad $ V_{Biegung}= \dfrac{1}{2} \ds \int_{0}^{l} E J\ w''\, ^2 \ \dd x $
 	
 \paragraph{ Äußeres Potential $ \pi^{(a)} $}
-	\qquad $ V_{Kraft}  = - P u\approx - P\ \dfrac{1}{2}\displaystyle \int_{0}^{l} w'\, ^2 \ \dd x $
+	\qquad $ V_{Kraft}  = - P u\approx - P\ \dfrac{1}{2}\ds \int_{0}^{l} w'\, ^2 \ \dd x $
 	
 \paragraph{	Mögliche Ansatzfunktionen:} \quad 
 
@@ -205,9 +213,11 @@
 \section{Anhang -- aus MEL2VO}
 \subsection{Trägheitsmomente}
 	\begin{center}
-		\includegraphics[width=0.6\linewidth]{Traegheit}
+		\includegraphics[width=0.8\linewidth]{Traegheit}
 	\end{center}
 	
 \subsection{Biegelinien}
-	
-	\includegraphics[width=0.7\linewidth]{balken-2}
+	\begin{center}
+%		\includegraphics[width=0.7\linewidth]{balken-1}
+		\includegraphics[width=0.7\linewidth]{balken-2}
+	\end{center}

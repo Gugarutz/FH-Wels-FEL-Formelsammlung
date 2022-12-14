@@ -1,0 +1,71 @@
+
+\section{Spannungstensor}
+
+\paragraph{ Tensor:} 
+	$ \left[\sigma_{ij}\right]
+		=\left[\begin{matrix}
+			\sigma_{xx} & \sigma_{yx} & \sigma_{zx} \\
+			\sigma_{xy} & \sigma_{yy} & \sigma_{zy} \\
+			\sigma_{xz} & \sigma_{yz} & \sigma_{zz}
+		\end{matrix}\right]
+	$
+
+\paragraph{ Spannungsvektor:}
+	$ \vec{\sigma}_n = \left[\sigma_{ij}\right]\cdot\vec{n} $
+		\quad $ \sigma_{ni} = \sigma_{ij} n_j  $ 
+		\qquad $ \vec{n} $ \dots muss Einheitsvektor sein
+		
+\paragraph{ Normalspannung:}
+	$ \sigma_{nn} = \vec{\sigma}_n\cdot\vec{n} 
+		= \left\{  [\sigma_{ij}] \cdot \vec{n}  \right\} \cdot \vec{n} $ 
+
+\paragraph{ Schubspannung:}
+	$ \tau = \sqrt{\sigma^2 - \sigma_n^2} 
+		\quad \text{mit } \sigma = \absvec{\vec{\sigma}_{nn}}
+		\qquad \vec{\tau} = \sigma_n - \sigma_{nn} \cdot \vec{n} 
+		\quad  \rightarrow
+		\quad \tau = \absvec{\vec{\tau}}
+	$
+	
+\paragraph{ Hauptnormalspannungen:}
+	$ 	- \sigma^3 + I_1 \cdot \sigma^2 - I_2 \cdot \sigma + I_3 = 0 $ \quad (Eigenwertproblem, lösen mit Rechenknecht)
+	
+\paragraph{ Koeffizienten (Invarianten) des Spannungstensors:}
+	\[ 	I_1=\sigma_{xx}+\sigma_{yy}+\sigma_{zz}=\spur [\sigma_{ij}] \]
+	\[ 	I_3=\det{\left[\sigma_{ij}\right]}=\sigma_1\cdot\sigma_2\cdot\sigma_3  \]
+	\[ 	I_2 = 
+		\begin{detmatrix}
+			\sigma_{xx} & \sigma_{yx} \\
+			\sigma_{xy} & \sigma_{yy}
+		\end{detmatrix}
+		+
+		\begin{detmatrix}
+			\sigma_{yy} & \sigma_{yz} \\
+			\sigma_{yz} & \sigma_{zz}
+		\end{detmatrix}
+		+
+		\begin{detmatrix}
+			\sigma_{xx} & \sigma_{zx} \\
+			\sigma_{xz} & \sigma_{zz}
+		\end{detmatrix}
+		=
+		\sigma_1\cdot\sigma_2 + \sigma_2\cdot\sigma_3 + \sigma_3\cdot\sigma_1  
+	\] 
+
+\paragraph{ Normalrichtungen zu den Hauptnormalspannungen:}
+
+	\[ 
+	\left\{ \left[ \sigma_{ij} \right] - \sigma_i \cdot [I] \right\} \cdot \vec{n}_i = \vec{0}
+	\quad [I] \dots 	\text{Einheitsmatrix }
+	\quad \sigma_i\dots \text{Einsetzten von } \sigma_1, \sigma_2 \text{ und } \sigma_3
+	\rightarrow	\vec{n}_1,\ \vec{n}_2 \text{ und } {\vec{n}}_3 
+	\]
+	
+\paragraph{ Kesselformeln:}
+	$ \sigma_{xx} = \dfrac{p_{\ue}}{2\ t} R \qquad \sigma_{yy} = \sigma_{\varphi\varphi} = 2\ \sigma_{xx} $ \qquad (ESZ) \qquad $ t \dots $ Wandstärke 
+	
+\paragraph{ Krümmungsradius: (hier?)}
+	$ R = \dfrac{E}{\sigma_F} \ds \sqrt{ \dfrac{1}{4} \left[ 3h^2 - M^{EP} \dfrac{12}{b\sigma_F} \right] } $ 
+	
+	
+\clearpage

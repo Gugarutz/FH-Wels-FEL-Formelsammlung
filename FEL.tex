@@ -72,7 +72,8 @@
 	\newcommand{\absvec}[1]{\left|\left|#1\right|\right|}
 	\newcommand{\deriv}[2]{\frac{\dd #1}{\dd #2}}
 	\newcommand{\spur}{\mathrm{spur}}
-	\def\mat#1{\underline{\underline{#1}}}
+	\def\mat#1{\underline{\underline{#1}}} 		% wenn das bevorzugt wird
+	\newcommand{\ds}{\displaystyle}
 	
 	\newenvironment{detmatrix}{\det \left| \begin{matrix}}{\end{matrix}\right|}
 
@@ -89,11 +90,15 @@
 
  \usepackage{showframe}		% auskommentieren vor finalem build % shows frames around margin, head, foot, etc;
 
-	\title{Formelsammlung FEL-3}
+	\title{Formelsammlung FEL-3 VO}
 	\author{basierend auf dem Skript von Prof. Reiter}
 	\date{\today}
 
 \begin{document}
 	\maketitle
-	\input{section/FEL1}
+	\input{section/1} %input für vermeidung von pagebreaks
+	\input{section/2}
+	\input{section/3}
+	\input{section/4}
+	\input{section/anhang}
 \end{document}

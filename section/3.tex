@@ -1,0 +1,40 @@
+
+\section{Biegungen, Verzerrungen und Energien (?)}
+
+\paragraph{ Verzerrung eines Balkens}
+	$ U = \ds
+	      \int_{x_1}^{x_2} \dfrac{N^2}  {2\ E A}   \dd x
+	    + \int_{x_1}^{x_2} \dfrac{M_b^2}{2\ E J_b} \dd x 
+	    + \int_{x_1}^{x_2} \dfrac{M_T^2}{2\ G J_T} \dd x 
+	    + \int_{x_1}^{x_2} \dfrac{Q^2}  {2\ G A_s} \dd x $
+
+\paragraph{ Arbeitssatz}
+	$ W = U \qquad 
+		W = \dfrac{1}{2}\ F\ w_F$
+
+\paragraph{ Castigliano:}
+	$ w_f  = \dfrac{\partial U}{\partial F_i} \qquad w_H = \dfrac{\partial U}{\partial H} $
+	
+\paragraph{ Menabrea:}
+	$ \dfrac{\partial U}{\partial X_i} = 0 $
+		
+		\vskip 3pt
+	$ X_i $\dots Auflagekraft; statisch unbestimmte, innere Kraft
+	
+	\textbf{Äußere/Innerlich statische Bestimmtheit:}
+	
+	2-dimensional:\quad $ N = Z + R - 3\ K $
+		\hfil 3-dimensional:\quad $ N = Z + R - 6\ K $ \hfil
+	
+	$ Z $\dots Zwangskräfte
+		\qquad $ R $\dots Reaktionskräfte (Lagerkräfte)
+		\qquad $ K $\dots Körper
+	
+\paragraph{ Ritz:} \quad siehe S.176 im Skript
+	
+	$ \vec{u} \approx \tilde{u}_{(x,y,z)} = \ds\sum_k a_k\ \vec{\varphi}_{k(x,y,z)} $
+		\qquad $ \vec{\varphi}_{k(x,y,z)} $\dots Ritz'sche Ansatzfunktion
+		\qquad $ a_k $\dots Koeffizienten
+	
+	$ V \approx \tilde{V}_{(\tilde{u})} = \tilde{V}_{(a_k)} $
+		\qquad $ \dfrac{\partial \tilde{V}_{(a_k)}}{\partial a_k} = 0 \rightarrow a_k $

@@ -1,7 +1,7 @@
 {
     "InternalPDFViewer": {
-        "Embedded": false,
-        "File": ""
+        "Embedded": true,
+        "File": "FEL.pdf"
     },
     "Session": {
         "Bookmarks": [
@@ -10,12 +10,52 @@
         "FileVersion": 1,
         "Files": [
             {
-                "Col": 0,
+                "Col": 31,
                 "EditorGroup": 0,
                 "FileName": "FEL.tex",
+                "FirstLine": 36,
+                "FoldedLines": "",
+                "Line": 92
+            },
+            {
+                "Col": 0,
+                "EditorGroup": 0,
+                "FileName": "section/1.tex",
                 "FirstLine": 0,
                 "FoldedLines": "",
-                "Line": 0
+                "Line": 71
+            },
+            {
+                "Col": 0,
+                "EditorGroup": 0,
+                "FileName": "section/2.tex",
+                "FirstLine": 0,
+                "FoldedLines": "",
+                "Line": 59
+            },
+            {
+                "Col": 0,
+                "EditorGroup": 0,
+                "FileName": "section/3.tex",
+                "FirstLine": 0,
+                "FoldedLines": "",
+                "Line": 40
+            },
+            {
+                "Col": 0,
+                "EditorGroup": 0,
+                "FileName": "section/4.tex",
+                "FirstLine": 0,
+                "FoldedLines": "",
+                "Line": 39
+            },
+            {
+                "Col": 9,
+                "EditorGroup": 0,
+                "FileName": "section/anhang.tex",
+                "FirstLine": 0,
+                "FoldedLines": "",
+                "Line": 6
             }
         ],
         "MasterFile": "FEL.tex",

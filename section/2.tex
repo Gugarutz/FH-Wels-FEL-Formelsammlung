@@ -1,0 +1,59 @@
+
+
+\section{Verzerrungstensor}
+
+\paragraph{ Tensor:}
+	$ 
+	\left[\varepsilon_{ij}\right]
+	=
+	\left[\begin{matrix}
+		\varepsilon_{xx} & \varepsilon_{xy} & \varepsilon_{zx} \\
+		\varepsilon_{xy} & \varepsilon_{yy} & \varepsilon_{yz} \\
+		\varepsilon_{zx} & \varepsilon_{yz} & \varepsilon_{zz}
+	\end{matrix}\right]
+	=
+	\left[\begin{matrix}
+		\varepsilon_{xx}      & \frac{\gamma_{xy}}{2} & \frac{\gamma_{zx}}{2} \\
+		\frac{\gamma_{xy}}{2} & \varepsilon_{yy}      & \frac{\gamma_{yz}}{2} \\
+		\frac{\gamma_{zx}}{2} & \frac{\gamma_{yz}}{2} & \varepsilon_{zz}
+	\end{matrix}\right]
+	$
+	\hfil
+	$ \varepsilon_i = \vec{n}_i^\top \cdot [\varepsilon_{ij}] \cdot \vec{n}_i $
+	\hfil
+	
+\paragraph{ Materialgesetz: (isentrope Materiale)}
+	\[ 
+		\varepsilon_{xx} = \dfrac{1}{E} \left[\sigma_1 - \nu (\sigma_2 - \sigma_3)\right] + \alpha_T \cdot \Delta T
+		\qquad\qquad
+		\varepsilon_{yy} = \dfrac{1}{E} \left[\sigma_2 - \nu (\sigma_3 - \sigma_1)\right] + \alpha_T \cdot \Delta T
+	\]
+	\[
+		\varepsilon_{zz} = \dfrac{1}{E} \left[\sigma_3 - \nu (\sigma_1 - \sigma_2)\right] + \alpha_T \cdot \Delta T
+		\qquad\qquad
+		\gamma_{xy} = \dfrac{1}{G} \cdot \sigma_{xy} = \dfrac{2 \cdot (1 + \nu)}{E} \cdot \sigma_{xy}
+	\]
+	
+\paragraph{ Materialgesetz 2???}
+	$       G = \dfrac{E}{2(1+ \nu)} 
+	\quad   K = \dfrac{E}{3(1-2\nu)} 
+	\quad \mu = \dfrac{E}{2(1+ \nu)}   $ kann nicht stimmen
+	
+	$
+		\lambda = \dfrac{E\nu}{ (1+\nu) (1-2\nu) } 
+		\quad \rightarrow \quad
+		\sigma_{ij} = \lambda\varepsilon_{kk} \delta_{ij} + 2\mu \varepsilon_{ij}
+	$
+	
+	
+\paragraph{ Vergleichsspannungen}
+	\[ 
+		\text{Mises: } \quad 
+		\sigma_{v,M} = \sqrt{\dfrac{1}{2} \cdot \left[\left(\sigma_x-\sigma_y\right)^2+\left(\sigma_y-\sigma_z\right)^2+\left(\sigma_z-\sigma_x\right)^2+6\cdot\left({\tau_{xy}}^2+{\tau_{xz}}^2+{\tau_{yz}}^2\right)\right]}
+	\]
+	\[ 
+	\text{Mises einfach: } \quad \sigma_v = \sqrt{\sigma^2 + \zeta\ \tau^2} \quad \zeta = \left(\dfrac{\sigma_D}{\tau_D}\right)^2 \text{ oder } = 3
+	\qquad
+	\text{Schweißnaht: }\quad \sigma_{vs} = \sqrt{\sigma_\perp^2 + \tau_\parallel^2 + \tau_\perp^2}
+	\]
+
