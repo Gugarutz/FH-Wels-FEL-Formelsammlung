@@ -88,15 +88,15 @@
 	\newcommand{\eff}{e\!f\!f}
 
 
- \usepackage{showframe}		% auskommentieren vor finalem build % shows frames around margin, head, foot, etc;
+% \usepackage{showframe}		% auskommentieren vor finalem build % shows frames around margin, head, foot, etc;
 
 	\title{Formelsammlung FEL-3 VO}
 	\author{basierend auf dem Skript von Prof. Reiter}
 	\date{\today}
 
 \begin{document}
-	\maketitle
-	\input{section/1} %input für vermeidung von pagebreaks
+	\maketitle			% hierdurch keine seitenzahl  auf seite 1. gefällt mir so nicht ganz 
+	\input{section/1}   % input für vermeidung von pagebreaks (statt include)
 	\input{section/2}
 	\input{section/3}
 	\input{section/4}
